@@ -1,0 +1,12 @@
+CREATE TABLE IF NOT EXISTS client (
+    id_client VARCHAR(64) NOT NULL DEFAULT '',
+    Surname VARCHAR(256) DEFAULT '',
+    Name VARCHAR(256) DEFAULT '',
+    Phone VARCHAR(64) DEFAULT '',
+    Home VARCHAR(64) DEFAULT '',
+    Current_Day TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    Email VARCHAR(34) UNIQUE,
+    Password VARCHAR(128),
+    Salt VARCHAR(128),
+    PRIMARY KEY (id_client)
+) ENGINE = "InnoDB" DEFAULT CHARSET=utf8;
